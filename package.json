@@ -11,7 +11,7 @@
   },
   "scripts": {
     "republish": "npm run republish:lexicon && npm run republish:glossary",
-    "republish:lexicon": "google-spreadsheet-download %% 1 > lexicon.json",
+    "republish:lexicon": "google-spreadsheet-download 1NH48-LpSTU2s5tPUZ2aHv8HCySQiBhHBArhQxLndUQI 1 > lexicon.json",
     "republish:glossary": "node -e 'JSON.parse(require(\"fs\").readFileSync(\"lexicon.json\")).map(function(d){if(d[\"title\"]&&d[\"definition\"]){console.log(\"\\n# \"+d[\"title\"]+\"\\n\"+d[\"definition\"].trim().replace(/\\n{2,}/g,\"\\n\"))}})' > GLOSSARY.md",
     "postinstall": "gitbook install .",
     "test": "npm run build",
